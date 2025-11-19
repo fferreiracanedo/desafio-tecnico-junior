@@ -461,18 +461,6 @@ Se aparecer erro de CORS:
 - Verifique as credenciais no `.env`
 - Tente executar manualmente: `npx sequelize-cli db:migrate`
 
-## 🔮 Melhorias Futuras
-
-- [ ] WebSocket/Socket.IO para chat em tempo real
-- [ ] Autenticação (JWT) para múltiplos usuários
-- [ ] Paginação no histórico de mensagens
-- [ ] Suporte a imagens e arquivos
-- [ ] Notificações em tempo real
-- [ ] Internacionalização (i18n)
-- [ ] Melhorias de acessibilidade (ARIA)
-- [ ] Tema claro/escuro
-- [ ] Persistência de sessão do usuário
-
 ## 📝 Notas de Desenvolvimento
 
 ### Decisões Técnicas
