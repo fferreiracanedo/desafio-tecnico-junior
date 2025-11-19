@@ -25,7 +25,7 @@ Aplicação de chat completa desenvolvida com React, Material-UI, Node.js/Expres
 
 ## 🎯 Objetivo do Projeto
 
-Implementar uma aplicação de chat onde usuários podem enviar mensagens e receber respostas automáticas do sistema. O projeto demonstra boas práticas de desenvolvimento, incluindo testes, CI/CD, Docker e documentação completa.
+Implementar uma aplicação de chat onde usuários podem enviar mensagens e receber respostas automáticas do sistema. O projeto demonstra boas práticas de desenvolvimento, incluindo Docker e documentação completa.
 
 ## ✨ Funcionalidades
 
@@ -71,19 +71,15 @@ Acesse **http://localhost:3000** no navegador! 🎉
 - **Express.js** - Framework web
 - **Sequelize** - ORM para PostgreSQL
 - **PostgreSQL** - Banco de dados relacional
-- **Jest** + **Supertest** - Testes
 - **ESLint** + **Prettier** - Linting e formatação
 
 ### Frontend
 - **React** 19
 - **Material-UI (MUI) v6** - Biblioteca de componentes
 - **Axios** - Cliente HTTP
-- **React Testing Library** - Testes de componentes
 
 ### DevOps
 - **Docker** + **Docker Compose** - Containerização
-- **GitHub Actions** - CI/CD
-- **Husky** - Git hooks
 
 ## 📋 Pré-requisitos
 
@@ -297,34 +293,6 @@ Deleta todas as mensagens do banco de dados.
 **Erros:**
 - `500` - Erro interno do servidor
 
-## 🧪 Testes
-
-### Backend
-
-Execute os testes:
-```bash
-cd backend
-npm test
-```
-
-Execute em modo watch:
-```bash
-npm run test:watch
-```
-
-### Frontend
-
-Execute os testes:
-```bash
-cd frontend
-npm test
-```
-
-Execute com cobertura:
-```bash
-npm test -- --coverage
-```
-
 ## 🗄️ Migrations
 
 ### Criar nova migration:
@@ -381,7 +349,6 @@ dk-tech-test/
 │   │   ├── migrations/       # Migrations do banco
 │   │   ├── routes/           # Definição de rotas
 │   │   ├── services/         # Lógica de negócio
-│   │   ├── __tests__/        # Testes
 │   │   └── index.js          # Entry point
 │   ├── config/               # Configurações Sequelize
 │   ├── .sequelizerc          # Config Sequelize CLI
@@ -398,9 +365,6 @@ dk-tech-test/
 │   ├── Dockerfile
 │   ├── package.json
 │   └── .env.example
-├── .github/
-│   └── workflows/
-│       └── ci.yml            # CI/CD GitHub Actions
 ├── docker-compose.yml
 ├── .gitignore
 └── README.md
@@ -413,14 +377,12 @@ dk-tech-test/
 - `npm run dev` - Inicia servidor em desenvolvimento (com nodemon)
 - `npm run migrate` - Executa migrations
 - `npm run migrate:undo` - Reverte última migration
-- `npm test` - Executa testes
 - `npm run lint` - Executa linter
 - `npm run format` - Formata código com Prettier
 
 ### Frontend
 - `npm start` - Inicia servidor de desenvolvimento
 - `npm run build` - Build para produção
-- `npm test` - Executa testes
 - `npm run eject` - Eject do Create React App (irreversível)
 
 ## 🚢 Deploy
@@ -454,12 +416,10 @@ npm run build
 - ✅ Tratamento de erros
 - ✅ Validação de entrada
 - ✅ CORS configurado
-- ✅ Testes automatizados
-- ✅ CI/CD com GitHub Actions
 - ✅ Dockerização completa
 - ✅ Linting e formatação
 
-## 🧪 Como Testar as Funcionalidades
+## 💡 Como Usar as Funcionalidades
 
 1. **Enviar Mensagem:**
    - Digite uma mensagem no campo de input
@@ -509,7 +469,6 @@ Se aparecer erro de CORS:
 - [ ] Suporte a imagens e arquivos
 - [ ] Notificações em tempo real
 - [ ] Internacionalização (i18n)
-- [ ] Testes E2E com Cypress
 - [ ] Melhorias de acessibilidade (ARIA)
 - [ ] Tema claro/escuro
 - [ ] Persistência de sessão do usuário
@@ -518,15 +477,13 @@ Se aparecer erro de CORS:
 
 ### Decisões Técnicas
 
-1. **Arquitetura Backend**: Separação em camadas (Routes → Controllers → Services → Models) para facilitar manutenção e testes.
+1. **Arquitetura Backend**: Separação em camadas (Routes → Controllers → Services → Models) para facilitar manutenção e organização do código.
 
 2. **Material-UI v6**: Utilizado por ser a versão mais recente estável com melhor suporte a React 19.
 
 3. **UUID para IDs**: Uso de UUID em vez de inteiros auto-incrementais para melhor escalabilidade e segurança.
 
 4. **Docker Compose**: Facilita o setup local e garante consistência entre ambientes.
-
-5. **Testes**: Cobertura básica de testes unitários e de integração para garantir qualidade do código.
 
 ### Padrões de Commit
 
@@ -536,7 +493,6 @@ Este projeto segue o padrão Conventional Commits:
 - `docs:` - Documentação
 - `style:` - Formatação
 - `refactor:` - Refatoração
-- `test:` - Testes
 - `chore:` - Tarefas de manutenção
 
 ## 📄 Licença
